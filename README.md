@@ -1,8 +1,15 @@
 # bastion.htb
 ### Write-up for the bastion machine from hackthebox
 
-nmap
+Bastion was an awesome box. Mounting an SMB share and enumerating its contents reveals a virtual hard disk, that you need to either figure out how to mount in kali or open in a VM. I chose to mount via kali. Once mounted, you can get user creds using samdump2, and ssh into the box and begin enumerating for privesc. You'll find a application that stores passwords in an insecure manner. If you didn't spin up a VM earlier, you'll have to do it now in order to get admin creds and root the box.
+
+### Scan and Basic Recon
+
+I began with a safe script and version scan with nmap
+
 ```
+nmap -sV -sC -oN tcp.nmap 10.10.10.134
+
 Starting Nmap 7.70 ( https://nmap.org ) at 2019-05-03 15:21 CDT
 Nmap scan report for 10.10.10.134
 Host is up (0.14s latency).
@@ -41,9 +48,10 @@ Host script results:
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 44.25 seconds
 ```
-smbmap
+
+Neat! No web servers so far, and guest login to SMB enabled. I ran `smbmap -u anonymous -H 10.10.10.134` and got the following output.
+
 ```
-smbmap -u anonymous -H 10.10.10.134
 [+] Finding open SMB ports....
 [+] Guest SMB session established on 10.10.10.134...
 [+] IP: 10.10.10.134:445	Name: 10.10.10.134                                      
@@ -55,6 +63,17 @@ smbmap -u anonymous -H 10.10.10.134
 	C$                                                	NO ACCESS
 	IPC$                                              	READ ONLY
 ```
+
+Taking a peek into the `Backups` share with `smbclient` shows many things to investigate. I could file transfer to my local machine, but that seems a bit excessive, especially with some files in the share that are larger than 5GB. Let's try mounting the share. I first made a mount point in `/mnt`.
+
+`mkdir /mnt/smb`
+
+and then ran
+
+`mount.cifs //10.10.10.134/Backups /mnt/smb`
+
+Success! Let's rummage through here and see what we can find. That 5GB file I mentioned earlier is a virtual hard drive. I'd like to see what on it. I could open this in a VM; but hey we've been mounting successfully so far and ~my computer is a piece of crap and likely wont't be able to handle the load of a VM~ I'm feeling lucky.
+
 john
 ```
 john --show --format=NT ~/Desktop/hashes.txt 
