@@ -78,7 +78,9 @@ After much research, I saw that I had to use `guestmount` from [http://libguestf
 
 `guestmount -a 9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd -i --ro /mnt/vhd/`
 
-The drive name following the `-a` is what will be mounted. `-i` inspects the disk looking for an operating system and mounts the filesystem as it would be mounted on the real virtual machine. `--ro` mounts the drive in read only mode. 
+The drive name following the `-a` is what will be mounted. `-i` inspects the disk looking for an operating system and mounts the filesystem as it would be mounted on the real virtual machine. `--ro` mounts the drive in read only mode. It gave me the below output.
+
+![Screenshot from 2019-07-25 22-23-45](https://user-images.githubusercontent.com/46615118/61970965-780a9400-afa3-11e9-825d-fa6189a01135.jpg)
 
 john
 ```
