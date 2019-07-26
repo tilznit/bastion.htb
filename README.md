@@ -86,6 +86,10 @@ The drive name following the `-a` is what will be mounted. `-i` inspects the dis
 
 On Windows, the Security Account Manager (SAM) is a database file that stores users' passwords. It can be used to authenticate local and remote users. SAM passwords are stored as a LM hash or as a NTLM hash. This file can be found in `%SystemRoot%/system32/config/SAM`.
 
+I used `samdump2` to extract the hashes from the SAM db.
+
+
+
 john
 ```
 john --show --format=NT ~/Desktop/hashes.txt 
@@ -93,3 +97,7 @@ john --show --format=NT ~/Desktop/hashes.txt
 *disabled* Guest::501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 L4mpje:bureaulampje:1000:aad3b435b51404eeaad3b435b51404ee:26112010952d963c8dc4217daec986d9:::
 ```
+
+### Privesc and Pwn
+
+![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
