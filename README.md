@@ -74,7 +74,7 @@ and then ran
 
 Success! Let's rummage through here and see what we can find. That 5GB file I mentioned earlier is a virtual hard drive. I'd like to see what's on it. I could open this in a VM, but hey we've been mounting successfully so far and ~my computer is crap and likely wont't be able to handle the load of a VM~ I'm feeling lucky.
 
-After much research, I saw that I had to use `guestmount` from [http://libguestfs.org/guestmount.1.html](libguestfs-tools). After installing `libguestfs-tools` I ran
+After much research, I saw that I could use `guestmount` from [http://libguestfs.org/guestmount.1.html](libguestfs-tools). After installing `libguestfs-tools` I ran
 
 `guestmount -a 9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd -i --ro /mnt/vhd/`
 
