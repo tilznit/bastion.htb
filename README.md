@@ -102,11 +102,9 @@ john --show --format=NT ~/Desktop/hashes.txt
 *disabled* Guest::501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 L4mpje:bureaulampje:1000:aad3b435b51404eeaad3b435b51404ee:26112010952d963c8dc4217daec986d9:::
 ```
-Looking back at our nmap output we see that ssh is available. I try 
+Looking back at our nmap output we see that ssh is available. I try `ssh L4mpje@10.10.10.134` and enter the password, and we're in and get `user.txt`!
 
-`ssh L4mpje@10.10.10.134` and enter the password, and we're in!
-
-
+![Screenshot from 2019-07-25 22-46-24 (1)](https://user-images.githubusercontent.com/46615118/61975322-6e3a5e00-afae-11e9-9e77-e4cff510e912.jpg)
 
 ### Privesc and Pwn
 
