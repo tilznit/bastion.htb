@@ -1,7 +1,7 @@
 # bastion.htb
 ### Write-up for the bastion machine from hackthebox
 
-Bastion was an awesome box. Mounting an SMB share and enumerating its contents reveals a virtual hard disk, that you need to either figure out how to mount in kali or open in a VM. I chose to mount via kali. Once mounted, you can get user creds using samdump2, and ssh into the box and begin enumerating for privesc. You'll find a application that stores passwords in an insecure manner. If you didn't spin up a VM earlier, you'll have to do it now in order to get admin creds and root the box.
+Bastion was an awesome box. Mounting an SMB share and enumerating its contents reveals a virtual hard disk, that you need to either figure out how to mount or open in a VM. I chose to mount via kali. Once mounted, you can get user creds using samdump2, ssh into the box and begin enumerating for privesc. You'll find a application that stores passwords in an insecure manner. If you didn't spin up a VM earlier, you'll have to do it now in order to get admin creds and root the box.
 
 ### Scan and Basic Recon
 
