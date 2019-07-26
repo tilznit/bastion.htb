@@ -88,7 +88,7 @@ On Windows, the Security Account Manager (SAM) is a database file that stores us
 
 I used `samdump2` to extract the hashes from the SAM db.
 
-
+![Screenshot from 2019-07-25 22-37-43](https://user-images.githubusercontent.com/46615118/61974849-2d8e1500-afad-11e9-908f-daf4ea2f346b.jpg)
 
 john
 ```
