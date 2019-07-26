@@ -49,7 +49,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 44.25 seconds
 ```
 
-Neat! No web servers so far, and guest login to SMB enabled. I ran `smbmap -u anonymous -H 10.10.10.134` and got the following output.
+Neat! No web servers so far, and anonymous access to SMB enabled. I ran `smbmap -u anonymous -H 10.10.10.134` and got the following output.
 
 ```
 [+] Finding open SMB ports....
