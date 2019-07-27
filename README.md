@@ -117,18 +117,19 @@ This returns the following:
 
 ![Screenshot from 2019-07-27 13-59-31](https://user-images.githubusercontent.com/46615118/61999282-1a4d7900-b083-11e9-9160-e9cabda87dbb.jpg)
 
-We'll focus first on mRemoteNG. Searchsploit has nothing, but google searching returns [this article](http://hackersvanguard.com/mremoteng-insecure-password-storage/). In reading the article, we see that the author has figured out a way to dump passwords stored in the app. 
+We'll focus first on mRemoteNG. Searchsploit has nothing, but google searching returns [this article](http://hackersvanguard.com/mremoteng-insecure-password-storage/). In reading the article, we see that the author has figured out a way to dump passwords stored in the app by editing the connections configuration file; by default named `confCons.xml`. 
 
-So, it looks like I'll have to spin up a VM and install the app to follow the author's lead. Rats. We need to use L4mpje's confCons.xml file; let's grab that before we mess with the VM:
+So, it looks like I'll have to spin up a VM and install the app to follow the author's lead. Rats. Let's grab L4mpje's `confCons.xml` before we mess with the VM. I'll use good ol' `scp`.
 
 ![Screenshot from 2019-07-27 14-50-03](https://user-images.githubusercontent.com/46615118/61999280-16b9f200-b083-11e9-883b-340a1c946598.jpg)
 
-Done.
+I installed a VM (windows 10, 64-bit, build WinDev1903Eval worked for me) and installed mRemoteNG. I replaced the stock config file with L4mpje's, and ran the program. It took a while to figure out that I only needed to expose the Admin password and not rewrite the `Protected` string mentioned at the beginning of the attack. We already have the access we need. I created a new external tool as mentioned in the article. I followed the next steps and was able to leak the Admin password.
 
+
+![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
 
 ![Screenshot from 2019-07-27 14-52-27](https://user-images.githubusercontent.com/46615118/61999279-14f02e80-b083-11e9-8bce-175663cad0ba.jpg)
 
 ![Screenshot from 2019-07-27 14-26-33](https://user-images.githubusercontent.com/46615118/61999281-1883b580-b083-11e9-8f04-07343d877988.jpg)
 
 
-![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
