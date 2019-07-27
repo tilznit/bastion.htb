@@ -113,6 +113,9 @@ Next I need to enumerate to find a path to privesc. A reasonable start would be 
 ```Powershell
 Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, InstallDate
 ```
-
+![Screenshot from 2019-07-27 14-52-27](https://user-images.githubusercontent.com/46615118/61999279-14f02e80-b083-11e9-8bce-175663cad0ba.jpg)
+![Screenshot from 2019-07-27 14-50-03](https://user-images.githubusercontent.com/46615118/61999280-16b9f200-b083-11e9-883b-340a1c946598.jpg)
+![Screenshot from 2019-07-27 14-26-33](https://user-images.githubusercontent.com/46615118/61999281-1883b580-b083-11e9-8f04-07343d877988.jpg)
+![Screenshot from 2019-07-27 13-59-31](https://user-images.githubusercontent.com/46615118/61999282-1a4d7900-b083-11e9-9160-e9cabda87dbb.jpg)
 
 ![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
