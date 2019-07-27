@@ -72,7 +72,7 @@ and then ran
 
 `mount.cifs //10.10.10.134/Backups /mnt/smb`
 
-Success! Let's rummage through here and see what we can find. That 5GB file I mentioned earlier is a virtual hard drive. I'd like to see what's on it. I could open this in a VM, but hey we've been mounting successfully so far and ~my computer is crap and likely wont't be able to handle the load of a VM~ I'm feeling lucky.
+Success! Let's rummage through here and see what we can find. That 5GB file I mentioned earlier is a virtual hard drive. I'd like to see what's on it. I could open it in a VM, but hey we've been mounting successfully so far and ~my computer is crap and likely wont't be able to handle the load of a VM~ I'm feeling lucky.
 
 After much research, I saw that I could use `guestmount` from [libguestfs-tools](http://libguestfs.org/guestmount.1.html). After installing `libguestfs-tools` I ran
 
