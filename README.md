@@ -108,4 +108,8 @@ Looking back at our nmap output we see that ssh is available. I try `ssh L4mpje@
 
 ### Privesc and Pwn
 
+```Powershell
+Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Sort-Object -Descending -Property InstallDate
+```
+
 ![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
