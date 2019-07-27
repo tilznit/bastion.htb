@@ -119,11 +119,15 @@ This returns the following:
 
 We'll focus first on mRemoteNG. Searchsploit has nothing, but google searching returns [this article](http://hackersvanguard.com/mremoteng-insecure-password-storage/). In reading the article, we see that the author has figured out a way to dump passwords stored in the app. 
 
-So, it looks like I'll have to spin up a VM and install the app to follow the author's lead. Rats. We need to use L4mpje's confCons.xml file; let's grab that before we mess with the VM.
+So, it looks like I'll have to spin up a VM and install the app to follow the author's lead. Rats. We need to use L4mpje's confCons.xml file; let's grab that before we mess with the VM:
+
+![Screenshot from 2019-07-27 14-50-03](https://user-images.githubusercontent.com/46615118/61999280-16b9f200-b083-11e9-883b-340a1c946598.jpg)
+
+Done.
 
 
 ![Screenshot from 2019-07-27 14-52-27](https://user-images.githubusercontent.com/46615118/61999279-14f02e80-b083-11e9-8bce-175663cad0ba.jpg)
-![Screenshot from 2019-07-27 14-50-03](https://user-images.githubusercontent.com/46615118/61999280-16b9f200-b083-11e9-883b-340a1c946598.jpg)
+
 ![Screenshot from 2019-07-27 14-26-33](https://user-images.githubusercontent.com/46615118/61999281-1883b580-b083-11e9-8f04-07343d877988.jpg)
 
 
