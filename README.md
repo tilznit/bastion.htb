@@ -108,10 +108,11 @@ Looking back at our nmap output we see that ssh is available. I try `ssh L4mpje@
 
 ### Privesc and Pwn
 
-Next I need to enumerate to find a path to privesc. A reasonable start would be to [look at the programs that the user installed](https://www.howtogeek.com/165293/how-to-get-a-list-of-software-installed-on-your-pc-with-a-single-command/) on the machine. I ran the following powershell to output installed software on 
+Next I need to enumerate to find a path to privesc. A reasonable start would be to [look at the programs that the user installed](https://www.howtogeek.com/165293/how-to-get-a-list-of-software-installed-on-your-pc-with-a-single-command/) on the machine. I ran the following powershell to output installed software on the machine.
 
 ```Powershell
 Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, InstallDate
 ```
+
 
 ![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
