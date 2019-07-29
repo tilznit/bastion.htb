@@ -135,8 +135,9 @@ I ssh'd in with the admin creds and entered the password. I then navigated to th
 
 ### Lessons Learned
 - I did this box a while back and my note taking was poor, thus:
-... I don't remember how I figured out that the version of mRemoteNG on the box was vulnerable to the attack
-... I don't remember how I figured out the SAM file was accessable.
-... More than likely I read the htb forums for the answers to the above.
+
+   - I don't remember how I figured out that the version of mRemoteNG on the box was vulnerable to the attack
+   - I don't remember how I figured out the SAM file was accessable.
+   - More than likely I read the htb forums for the answers to the above.
 
 - I need a better methodology for taking notes.
