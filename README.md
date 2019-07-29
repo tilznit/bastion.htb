@@ -94,7 +94,7 @@ I then ran john against the hashes, using rockyou.txt as the wordlist
 
 `john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt`
 
-and this gave me creds for L4mpje:
+and this gave me creds for the user `L4mpje`:
 
 ```
 john --show --format=NT ~/Desktop/hashes.txt 
