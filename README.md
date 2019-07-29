@@ -123,8 +123,7 @@ So, it looks like I'll have to spin up a VM and install the app to follow the au
 
 ![Screenshot from 2019-07-27 14-50-03](https://user-images.githubusercontent.com/46615118/61999280-16b9f200-b083-11e9-883b-340a1c946598.jpg)
 
-I installed a VM (windows 10, 64-bit, build WinDev1903Eval worked for me) and installed mRemoteNG. I replaced the stock config file with L4mpje's, and ran the program. It took a while to figure out that I only needed to expose the Admin password and not rewrite the `Protected` string mentioned at the beginning of the attack. We already have the access we need. I created a new external tool as mentioned in the article. I followed the next steps and was able to leak the Admin password.
-
+I installed a VM (windows 10, 64-bit, build WinDev1903Eval worked for me) and installed mRemoteNG. I replaced the stock config file with L4mpje's, and ran the program. It took a while to figure out that I only needed to expose the Admin password and not rewrite the `Protected` string mentioned at the beginning of the article. We already have the access we need. I created a new external tool as mentioned in the article. I followed the next steps and was able to leak the Admin password.
 
 ![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
 
