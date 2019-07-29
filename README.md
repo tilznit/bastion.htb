@@ -117,7 +117,7 @@ This returns the following:
 
 ![Screenshot from 2019-07-27 13-59-31](https://user-images.githubusercontent.com/46615118/61999282-1a4d7900-b083-11e9-9160-e9cabda87dbb.jpg)
 
-We'll focus first on mRemoteNG. Searchsploit has nothing, but google searching returns [this article](http://hackersvanguard.com/mremoteng-insecure-password-storage/). In reading the article, we see that the author has figured out a way to dump passwords stored in the app by editing the connections configuration file; by default named `confCons.xml`. 
+We'll focus first on mRemoteNG. Searchsploit has nothing, but google searching returns [this article](http://hackersvanguard.com/mremoteng-insecure-password-storage/). In reading the article, we see that the author has figured out a way to dump passwords stored in the app by editing the connections configuration file, which is by default named `confCons.xml`. 
 
 So, it looks like I'll have to spin up a VM and install the app to follow the author's lead. Rats. Let's grab L4mpje's `confCons.xml` before we mess with the VM. I'll use good ol' `scp`.
 
