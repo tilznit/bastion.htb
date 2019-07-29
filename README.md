@@ -1,6 +1,8 @@
 # bastion.htb
 ### Write-up for the bastion machine from hackthebox
 
+<img width="292" alt="Screen Shot 2019-07-29 at 1 49 06 PM" src="https://user-images.githubusercontent.com/46615118/62074159-bd2f0000-b207-11e9-9a21-0a3f64b2cb37.png">
+
 Bastion was an awesome learning opportunity. Mounting an SMB share and enumerating its contents reveals a virtual hard disk that you need to either figure out how to mount or open in a VM. I chose to mount via kali. Once mounted, you can get user creds using samdump2. You are then able to ssh into the box and begin enumerating for privesc. In your enumeration, you'll find a application that insecurely stores passwords. If you didn't spin up a VM earlier, you'll have to do it now in order to follow the steps for a password leak that was posted online. This will get you admin creds and enable you to root the box.
 
 ### Scan and Basic Recon
