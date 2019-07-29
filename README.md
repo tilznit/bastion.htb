@@ -141,3 +141,7 @@ I ssh'd in with the admin creds and entered the password. I then navigated to th
    - More than likely I read the htb forums for the answers to the above.
 
 - I need a better methodology for taking notes.
+
+![Screen Shot 2019-07-29 at 1 35 49 PM (1)](https://user-images.githubusercontent.com/46615118/62073401-3f1e2980-b206-11e9-94ff-f7290f302e32.jpg)
+
+![Screen Shot 2019-07-29 at 1 35 49 PM](https://user-images.githubusercontent.com/46615118/62073403-3fb6c000-b206-11e9-9fba-3d64db26cc0e.jpg)
