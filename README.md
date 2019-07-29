@@ -92,7 +92,7 @@ I used `samdump2` to extract the hashes from the SAM db.
 
 ![Screenshot from 2019-07-25 22-37-43](https://user-images.githubusercontent.com/46615118/61974849-2d8e1500-afad-11e9-908f-daf4ea2f346b.jpg)
 
-I then ran john against the hashes, using rockyou.txt as the wordlist
+I then ran `john` against the hashes, using `rockyou.txt` as the wordlist
 
 `john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt`
 
