@@ -144,6 +144,6 @@ I ssh'd in with the admin creds and entered the password. I then navigated to th
 
 - I need a better methodology for taking notes.
 
-<img width="546" alt="Screen Shot 2019-07-29 at 1 51 53 PM" src="https://user-images.githubusercontent.com/46615118/62074302-126b1180-b208-11e9-8e3e-e47b008e8aae.png">
+<img width="544" alt="Screen Shot 2019-07-29 at 1 51 53 PM" src="https://user-images.githubusercontent.com/46615118/62074302-126b1180-b208-11e9-8e3e-e47b008e8aae.png">
 
 <img width="544" alt="Screen Shot 2019-07-29 at 1 51 30 PM" src="https://user-images.githubusercontent.com/46615118/62074301-126b1180-b208-11e9-828f-8534496dc235.png">
