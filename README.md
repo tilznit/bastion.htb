@@ -3,7 +3,7 @@
 
 <img width="292" alt="Screen Shot 2019-07-29 at 1 49 06 PM" src="https://user-images.githubusercontent.com/46615118/62074159-bd2f0000-b207-11e9-9a21-0a3f64b2cb37.png">
 
-Bastion was an awesome learning opportunity. Mounting an SMB share and enumerating its contents reveals a virtual hard disk that you need to either figure out how to mount or open in a VM. I chose to mount via kali. Once mounted, you can get user creds using samdump2. You are then able to ssh into the box and begin enumerating for privesc. In your enumeration, you'll find a application that insecurely stores passwords. If you didn't spin up a VM earlier, you'll have to do it now in order to follow the steps for a password leak that was posted online. This will get you admin creds and enable you to root the box.
+I learned a lot on this box. Mounting an SMB share and enumerating its contents reveals a virtual hard disk that you need to either figure out how to mount or open in a VM. I chose to mount via kali. Once mounted, you can get user creds using samdump2. You are then able to ssh into the box and begin enumerating for privesc. In your enumeration, you'll find a application that insecurely stores passwords. If you didn't spin up a VM earlier, you'll have to do it now. This will get you admin creds and root.
 
 ### Scan and Basic Recon
 
@@ -121,11 +121,11 @@ This returns the following:
 
 We'll focus first on mRemoteNG. Searchsploit has nothing, but google searching returns [this article](http://hackersvanguard.com/mremoteng-insecure-password-storage/). In reading the article, we see that the author has figured out a way to dump passwords stored in the app by editing the connections configuration file, which is by default named `confCons.xml`. 
 
-So, it looks like I'll have to spin up a VM and install the app to follow the author's lead. Let's grab L4mpje's `confCons.xml` before we mess with the VM. I'll use good ol' `scp`.
+So, it looks like I'll have to spin up a VM and install the app to follow the author's lead. Let's grab L4mpje's `confCons.xml` before we mess with the VM. I'll use `scp`.
 
 ![Screenshot from 2019-07-27 14-50-03](https://user-images.githubusercontent.com/46615118/61999280-16b9f200-b083-11e9-883b-340a1c946598.jpg)
 
-I installed a VM (windows 10, 64-bit, build WinDev1903Eval worked for me) and installed mRemoteNG. I replaced the stock config file with L4mpje's, and ran the program. It took a while to figure out that I only needed to expose the Admin password and not rewrite the `Protected` string mentioned at the beginning of the article. We already have the access we need. I created a new external tool as mentioned in the article. I followed the next steps and was able to leak the Admin password.
+I spun up a Windows VM (windows 10, 64-bit, build WinDev1903Eval worked for me) and installed mRemoteNG. I replaced the stock config file with L4mpje's, and ran the program. It took a while to figure out that I only needed to expose the Admin password and not rewrite the `Protected` string mentioned at the beginning of the article. We already have the access we need. I created a new external tool as mentioned in the article. I followed the next steps and was able to leak the Admin password.
 
 ![Screenshot from 2019-05-23 15-45-18](https://user-images.githubusercontent.com/46615118/61974304-d5a2de80-afab-11e9-81f8-54f9a3bc92e4.jpg)
 
@@ -138,11 +138,10 @@ I ssh'd in with the admin creds and entered the password. I then navigated to th
 ### Lessons Learned
 - I did this box a while back and my note taking was poor, thus:
 
-   - I don't remember how I figured out that the version of mRemoteNG on the box was vulnerable to the attack
+   - I don't remember how I figured out that the version of mRemoteNG on the box was vulnerable to the attack.
    - I don't remember how I figured out the SAM file was accessable.
-   - More than likely I read the htb forums for the answers to the above.
 
-- I need a better methodology for taking notes.
+- I am working on a better methodology for taking notes. Siginificant progress will be seen in the Craft and RE box write-ups. 
 
 <img width="544" alt="Screen Shot 2019-07-29 at 1 51 53 PM" src="https://user-images.githubusercontent.com/46615118/62074302-126b1180-b208-11e9-8e3e-e47b008e8aae.png">
 
