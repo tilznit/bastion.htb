@@ -136,12 +136,9 @@ I ssh'd in with the admin creds and entered the password. I then navigated to th
 ~fin!
 
 ### Lessons Learned
-- I did this box a while back and my note taking was poor, thus:
-
-   - I don't remember how I figured out that the version of mRemoteNG on the box was vulnerable to the attack.
-   - I don't remember how I figured out the SAM file was accessable.
-
-- I am working on a better methodology for taking notes. Siginificant progress will be seen in the Craft and RE box write-ups. 
+- I did this box a while back and my note taking was poor, thus I don't remember key parts of the engagement.
+- I am working on a better methodology for taking notes. Siginificant progress will be seen in the Craft and RE box write-ups.
+- Enumerate. Don't try to speed through and get a flag. The objective is to learn, not get a badge.
 
 <img width="544" alt="Screen Shot 2019-07-29 at 1 51 53 PM" src="https://user-images.githubusercontent.com/46615118/62074302-126b1180-b208-11e9-8e3e-e47b008e8aae.png">
 
