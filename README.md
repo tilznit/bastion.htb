@@ -137,6 +137,7 @@ I ssh'd in with the admin creds and entered the password. I then navigated to th
 
 ### Lessons Learned
 - I did this box a while back and my note taking was poor, thus I don't remember key parts of the engagement.
+- As 0xdf notes in [their writeup](https://0xdf.gitlab.io/2019/09/07/htb-bastion.html): regarding the SAM registry files, they are usually locked away whe the system is live, but on a mounted drive you can view them.
 - I am working on a better methodology for taking notes. Siginificant progress will be seen in the Craft and RE box write-ups.
 - Enumerate. Don't try to speed through and get a flag. The objective is to learn, not get a badge.
 
